@@ -1,5 +1,10 @@
 package automation.testsuite;
 
-public class LoginTest {
+import org.testng.annotations.BeforeMethod;
 
+public class LoginTest {
+	@BeforeMethod
+	public void openChromeBrowser() {
+		//
+	}
 }
