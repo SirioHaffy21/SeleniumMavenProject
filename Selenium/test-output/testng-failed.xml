@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.Day8_Practice">
+      <class name="automation.testsuite.BTVN_Day8_1">
         <methods>
-          <include name="initChromeDriver"/>
-          <include name="getElementByName"/>
+          <include name="findUserEmail"/>
         </methods>
-      </class> <!-- automation.testsuite.Day8_Practice -->
+      </class> <!-- automation.testsuite.BTVN_Day8_1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

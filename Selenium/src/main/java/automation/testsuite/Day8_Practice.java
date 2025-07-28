@@ -29,7 +29,7 @@ public class Day8_Practice extends CommonBase {
 
 	@Test
 	public void getElementByLinkText() {
-		driver = initChromeDriver(CT_PageURL.SELECTIONHUB_URL);
+		driver = initChromeDriver(CT_PageURL.SELECTORS_HUB_URL);
 		WebElement textFindOut = driver
 				.findElement(By.linkText("Find out how to automate these controls without XPath"));
 		System.out.println("Find out: " + textFindOut);
@@ -37,7 +37,7 @@ public class Day8_Practice extends CommonBase {
 
 	@Test
 	public void getElementByPartialLinkText() {
-		driver = initChromeDriver(CT_PageURL.SELECTIONHUB_URL);
+		driver = initChromeDriver(CT_PageURL.SELECTORS_HUB_URL);
 		WebElement textCourse = driver.findElement(By.partialLinkText("A course with complex scenarios"));
 		System.out.println("Find out: " + textCourse);
 	}
