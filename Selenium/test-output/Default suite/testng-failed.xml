@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.BTVN_Day8_1">
+      <class name="automation.testsuite.BTVN_Day8_2">
         <methods>
-          <include name="findUserEmail"/>
+          <include name="findFirstElement_Name"/>
         </methods>
-      </class> <!-- automation.testsuite.BTVN_Day8_1 -->
+      </class> <!-- automation.testsuite.BTVN_Day8_2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
