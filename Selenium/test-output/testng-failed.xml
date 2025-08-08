@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.BTVN_Day8_2">
+      <class name="automation.testsuite.Day12_HandleCheckBox">
         <methods>
-          <include name="findFirstElement_Name"/>
+          <include name="chooseHobbies"/>
         </methods>
-      </class> <!-- automation.testsuite.BTVN_Day8_2 -->
+      </class> <!-- automation.testsuite.Day12_HandleCheckBox -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,10 +1,11 @@
 package automation.common;
 
-//import java.time.Duration;
+import java.time.Duration;
 
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.*;
 
 public class CommonBase {
 
@@ -15,7 +16,20 @@ public class CommonBase {
 		//System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
-		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		//driver.manage().window().fullscreen();
 		return driver;
+	}
+
+	public void scrollToElement(By locator) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement element = getElementPresentDOM(locator);
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+	}
+
+	public WebElement getElementPresentDOM(By locator) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return driver.findElement(locator);
 	}
 }
