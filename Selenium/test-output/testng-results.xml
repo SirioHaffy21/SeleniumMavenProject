@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-11T20:39:59 ICT" name="Default suite" finished-at="2025-08-11T20:40:09 ICT" duration-ms="10232">
+  <suite started-at="2025-08-11T22:27:38 ICT" name="Default suite" finished-at="2025-08-11T22:27:57 ICT" duration-ms="19386">
     <groups>
     </groups>
-    <test started-at="2025-08-11T20:39:59 ICT" name="Default test" finished-at="2025-08-11T20:40:09 ICT" duration-ms="10232">
+    <test started-at="2025-08-11T22:27:38 ICT" name="Default test" finished-at="2025-08-11T22:27:57 ICT" duration-ms="19386">
       <class name="automation.testsuite.Day12_Practice">
-        <test-method signature="dropdownListSelectCountry()[pri:0, instance:automation.testsuite.Day12_Practice@248e319b]" started-at="2025-08-11T20:39:59 ICT" name="dropdownListSelectCountry" finished-at="2025-08-11T20:40:09 ICT" duration-ms="10147" status="PASS">
+        <test-method signature="chooseDisableRadio()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:38 ICT" name="chooseDisableRadio" finished-at="2025-08-11T22:27:41 ICT" duration-ms="2998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseDisableRadio -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:41 ICT" name="endProcess" finished-at="2025-08-11T22:27:41 ICT" duration-ms="131" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method signature="chooseOver18()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:41 ICT" name="chooseOver18" finished-at="2025-08-11T22:27:43 ICT" duration-ms="2106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseOver18 -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:43 ICT" name="endProcess" finished-at="2025-08-11T22:27:43 ICT" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method signature="chooseUnder18()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:43 ICT" name="chooseUnder18" finished-at="2025-08-11T22:27:46 ICT" duration-ms="2523" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseUnder18 -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:46 ICT" name="endProcess" finished-at="2025-08-11T22:27:46 ICT" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+        <test-method signature="dropdownListSelectCountry()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:46 ICT" name="dropdownListSelectCountry" finished-at="2025-08-11T22:27:57 ICT" duration-ms="11114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dropdownListSelectCountry -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day12_Practice@1ca3b418]" started-at="2025-08-11T22:27:57 ICT" name="endProcess" finished-at="2025-08-11T22:27:57 ICT" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
       </class> <!-- automation.testsuite.Day12_Practice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

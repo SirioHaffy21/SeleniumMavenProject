@@ -32,4 +32,49 @@ public class Day12_Practice extends CommonBase {
 		String country2 = selCountry.getFirstSelectedOption().getText();
 		assertEquals(country2, "United States");
 	}
+
+	@Test
+	public void chooseUnder18() {
+		driver = initChromeDriver(CT_PageURL.AUTOMATION_FC_URL);
+		WebElement under18 = driver.findElement(By.xpath("//label[@for='under_18']"));
+
+		assertEquals(under18.isSelected(), false);
+
+		if(under18.isEnabled() == true) {
+			under18.click();
+			System.out.println("Under 18 options was choosen.");
+		}
+	}
+
+	@Test
+	public void chooseOver18() {
+
+		driver = initChromeDriver(CT_PageURL.AUTOMATION_FC_URL);
+		WebElement over18 = driver.findElement(By.xpath("//label[@for='over_18']"));
+
+		assertEquals(over18.isSelected(), false);
+
+		if(over18.isEnabled() == true) {
+			over18.click();
+			System.out.println("Over 18 options was choosen.");
+		}
+	}
+
+	@Test
+	public void chooseDisableRadio() {
+		driver = initChromeDriver(CT_PageURL.AUTOMATION_FC_URL);
+		WebElement radioDisable = driver.findElement(By.xpath("//label[@for='radio-disabled']"));
+
+		assertEquals(radioDisable.isSelected(), false);
+
+		if(radioDisable.isEnabled() == true) {
+			radioDisable.click();
+			System.out.println("Radio disable options was choosen.");
+		}
+	}
+
+	@AfterMethod
+	public void endProcess() {
+		driver.close();
+	}
 }
