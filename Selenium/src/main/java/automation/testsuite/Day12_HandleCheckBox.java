@@ -13,7 +13,6 @@ public class Day12_HandleCheckBox extends CommonBase {
 		driver = initChromeDriver(CT_PageURL.DEMOQA_URL);
 		scrollToElement(By.id("userNumber"));
 
-
 		WebElement sport = driver.findElement(By.xpath("//label[text()='Sports']"));
 
 		if (sport.isSelected() == false) {
