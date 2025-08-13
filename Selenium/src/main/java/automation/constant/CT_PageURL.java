@@ -8,4 +8,5 @@ public class CT_PageURL {
 	public static String CODESTAR_URL = "https://codestar.vn/khoa-hoc/";
 	public static String TECHDEV_URL = "https://techydevs.com/demos/themes/html/listhub-demo/listhub/index.html";
 	public static String GLOBALQA_URL = "https://www.globalsqa.com/demo-site/select-dropdown-menu/";
+	public static String STARCRM_URL = "http://test-system.crmstar.vn/";
 }
