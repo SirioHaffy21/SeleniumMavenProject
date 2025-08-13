@@ -6,7 +6,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.*;
-import org.testng.annotations.AfterMethod;
 
 public class CommonBase {
 
@@ -14,21 +13,23 @@ public class CommonBase {
 
 	public WebDriver initChromeDriver(String url) {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
-		//System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
+		// System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir")
+		// + "\\driver\\geckodriver.exe");
 		driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-		//driver.manage().window().fullscreen();
+		// driver.manage().window().fullscreen();
 		return driver;
 	}
 
 	public WebDriver initFireFoxDriver(String url) {
-		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")
+		// + "\\driver\\chromedriver.exe");
 		System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-		//driver.manage().window().fullscreen();
+		// driver.manage().window().fullscreen();
 		return driver;
 	}
 
@@ -42,11 +43,5 @@ public class CommonBase {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		return driver.findElement(locator);
-	}
-
-	@AfterMethod
-	public void closeDriver() {
-		if(driver != null)
-			driver.close();
 	}
 }

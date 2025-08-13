@@ -11,7 +11,7 @@ import automation.common.CommonBase;
 import automation.constant.CT_PageURL;
 import automation.pageLocator.LoginPage;
 
-public class LoginTest extends CommonBase{
+public class LoginTest extends CommonBase {
 	@BeforeMethod
 	public void openChromeBrowser() {
 		driver = initFireFoxDriver(CT_PageURL.ALADA_URL);
@@ -22,7 +22,7 @@ public class LoginTest extends CommonBase{
 	public void loginSuccessfully() {
 		LoginPage login = new LoginPage(driver);
 		login.loginFunction("nva@gmail.com", "123456");
-		//assertEquals(false, null);
+		// assertEquals(false, null);
 		WebElement khoahocCuatoi = driver.findElement(By.xpath("//a[text() = 'Khóa học của tôi']"));
 		assertTrue(khoahocCuatoi.isDisplayed());
 	}
@@ -31,7 +31,7 @@ public class LoginTest extends CommonBase{
 	public void loginFailWithBlank() {
 		LoginPage login = new LoginPage(driver);
 		login.loginFunction("", "");
-		//assertEquals(false, null);
+		// assertEquals(false, null);
 		WebElement textUsernameError = driver.findElement(By.xpath("//label[@for='txtLoginUsername']"));
 		assertEquals(textUsernameError.isDisplayed(), true);
 		assertEquals(textUsernameError.getText(), "Vui lòng nhập email");
@@ -44,7 +44,7 @@ public class LoginTest extends CommonBase{
 	public void loginFail_IncorrectUsername() {
 		LoginPage login = new LoginPage(driver);
 		login.loginFunction("nvb@gmail.com", "123456");
-		//assertEquals(false, null);
+		// assertEquals(false, null);
 		WebElement textUsernameError = driver.findElement(By.xpath("//p[@class='cred']"));
 		assertEquals(textUsernameError.isDisplayed(), true);
 		assertEquals(textUsernameError.getText(), "Email này chưa được đăng ký.");
@@ -54,10 +54,15 @@ public class LoginTest extends CommonBase{
 	public void loginFail_IncorrectPassword() {
 		LoginPage login = new LoginPage(driver);
 		login.loginFunction("nva@gmail.com", "12345");
-		//assertEquals(false, null);
+		// assertEquals(false, null);
 		WebElement textPasswordError = driver.findElement(By.xpath("//p[@class='cred']"));
 		assertEquals(textPasswordError.isDisplayed(), true);
 		assertEquals(textPasswordError.getText(), "Mật khẩu sai.");
 	}
 
+	@AfterMethod
+	public void closeDriver() {
+		if (driver != null)
+			driver.close();
+	}
 }
