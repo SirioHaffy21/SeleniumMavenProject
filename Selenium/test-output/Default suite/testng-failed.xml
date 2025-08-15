@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.LoginTest">
+      <class name="automation.testsuite.Day13_Practice">
         <methods>
-          <include name="openChromeBrowser"/>
           <include name="closeDriver"/>
-          <include name="loginFailWithBlank"/>
+          <include name="logout_cancel"/>
+          <include name="initDriver"/>
         </methods>
-      </class> <!-- automation.testsuite.LoginTest -->
+      </class> <!-- automation.testsuite.Day13_Practice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
