@@ -39,7 +39,7 @@ public class CRMStar_LoginPage {
 		return loginTitle.isDisplayed();
 	}
 
-	public String notice() {
+	public String inform() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		WebElement errorDiv = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='fl-message']")));

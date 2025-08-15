@@ -1,7 +1,6 @@
 package automation.testsuite;
 
 import static org.testng.Assert.*;
-import org.openqa.selenium.*;
 import org.testng.annotations.*;
 
 import automation.common.CommonBase;
