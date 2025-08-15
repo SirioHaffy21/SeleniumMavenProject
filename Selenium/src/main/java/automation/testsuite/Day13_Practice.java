@@ -25,21 +25,21 @@ public class Day13_Practice extends CommonBase {
 	public void loginFail_IncorrectEmail() {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
 		loginPage.loginFunction("account@gmail.com", "12345678");
-		assertEquals(loginPage.notice(), "Email hoặc mật khẩu không đúng");
+		assertEquals(loginPage.inform(), "Email hoặc mật khẩu không đúng");
 	}
 
 	@Test
 	public void loginFail_IncorrectPass() {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
 		loginPage.loginFunction("admin@gmail.com", "12345679");
-		assertEquals(loginPage.notice(), "Email hoặc mật khẩu không đúng");
+		assertEquals(loginPage.inform(), "Email hoặc mật khẩu không đúng");
 	}
 
 	@Test
 	public void loginFail_IncorrectEmailAndPass() {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
 		loginPage.loginFunction("account@gmail.com", "12345679");
-		assertEquals(loginPage.notice(), "Email hoặc mật khẩu không đúng");
+		assertEquals(loginPage.inform(), "Email hoặc mật khẩu không đúng");
 	}
 
 	@Test

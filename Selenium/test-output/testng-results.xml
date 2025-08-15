@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-15T14:58:53 ICT" name="Default suite" finished-at="2025-08-15T14:59:01 ICT" duration-ms="8296">
+  <suite started-at="2025-08-15T15:24:49 ICT" name="Default suite" finished-at="2025-08-15T15:25:49 ICT" duration-ms="59873">
     <groups>
     </groups>
-    <test started-at="2025-08-15T14:58:53 ICT" name="Default test" finished-at="2025-08-15T14:59:01 ICT" duration-ms="8296">
+    <test started-at="2025-08-15T15:24:49 ICT" name="Default test" finished-at="2025-08-15T15:25:49 ICT" duration-ms="59873">
       <class name="automation.testsuite.Day13_Practice">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@53045c6c]" started-at="2025-08-15T14:58:53 ICT" name="initDriver" finished-at="2025-08-15T14:58:58 ICT" duration-ms="5572" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:24:49 ICT" name="initDriver" finished-at="2025-08-15T15:24:55 ICT" duration-ms="6305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="loginSuccess()[pri:0, instance:automation.testsuite.Day13_Practice@53045c6c]" started-at="2025-08-15T14:58:58 ICT" name="loginSuccess" finished-at="2025-08-15T14:59:00 ICT" duration-ms="1452" status="PASS">
+        <test-method signature="loginFail_IncorrectEmail()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:24:55 ICT" name="loginFail_IncorrectEmail" finished-at="2025-08-15T15:24:57 ICT" duration-ms="1341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFail_IncorrectEmail -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:24:57 ICT" name="closeDriver" finished-at="2025-08-15T15:24:58 ICT" duration-ms="1061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:24:58 ICT" name="initDriver" finished-at="2025-08-15T15:25:02 ICT" duration-ms="4507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="loginFail_IncorrectEmailAndPass()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:02 ICT" name="loginFail_IncorrectEmailAndPass" finished-at="2025-08-15T15:25:04 ICT" duration-ms="1536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFail_IncorrectEmailAndPass -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:04 ICT" name="closeDriver" finished-at="2025-08-15T15:25:05 ICT" duration-ms="987" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:05 ICT" name="initDriver" finished-at="2025-08-15T15:25:09 ICT" duration-ms="4603" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="loginFail_IncorrectPass()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:09 ICT" name="loginFail_IncorrectPass" finished-at="2025-08-15T15:25:11 ICT" duration-ms="1509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFail_IncorrectPass -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:11 ICT" name="closeDriver" finished-at="2025-08-15T15:25:12 ICT" duration-ms="1010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:12 ICT" name="initDriver" finished-at="2025-08-15T15:25:17 ICT" duration-ms="4533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="loginSuccess()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:17 ICT" name="loginSuccess" finished-at="2025-08-15T15:25:18 ICT" duration-ms="1495" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginSuccess -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@53045c6c]" started-at="2025-08-15T14:59:00 ICT" name="closeDriver" finished-at="2025-08-15T14:59:01 ICT" duration-ms="1192" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:18 ICT" name="closeDriver" finished-at="2025-08-15T15:25:19 ICT" duration-ms="1096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:19 ICT" name="initDriver" finished-at="2025-08-15T15:25:24 ICT" duration-ms="4597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="logout_cancel()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:24 ICT" name="logout_cancel" finished-at="2025-08-15T15:25:33 ICT" duration-ms="9196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout_cancel -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:33 ICT" name="closeDriver" finished-at="2025-08-15T15:25:34 ICT" duration-ms="1069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:34 ICT" name="initDriver" finished-at="2025-08-15T15:25:38 ICT" duration-ms="4462" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="logout_success()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:38 ICT" name="logout_success" finished-at="2025-08-15T15:25:48 ICT" duration-ms="9540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout_success -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@1cf6d1be]" started-at="2025-08-15T15:25:48 ICT" name="closeDriver" finished-at="2025-08-15T15:25:49 ICT" duration-ms="944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
