@@ -17,9 +17,9 @@ public class Day13_Practice extends CommonBase {
 	@Test
 	public void loginSuccess() {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
+		CRMStar_HomePage homePage = new CRMStar_HomePage(driver);
 		loginPage.loginFunction("admin@gmail.com", "12345678");
-		WebElement resultPage = driver.findElement(By.xpath("//p[text()='Quản lý người dùng']"));
-		assertTrue(resultPage.isDisplayed());
+		assertTrue(homePage.isDisplayed());
 	}
 
 	@Test
