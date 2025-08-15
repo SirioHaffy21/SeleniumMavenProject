@@ -35,9 +35,8 @@ public class CRMStar_HomePage {
 			logoutModal.click();
 	}
 
-	public boolean isDisplay() {
+	public boolean isDisplayed() {
 		WebElement resultHomePage = driver.findElement(By.xpath("//p[text()='Quản lý người dùng']"));
 		return resultHomePage.isDisplayed();
 	}
-
 }

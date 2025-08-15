@@ -34,7 +34,7 @@ public class CRMStar_LoginPage{
 		}
 	}
 
-	public boolean isDisplay() {
+	public boolean isDisplayed() {
 		WebElement loginTitle = driver.findElement(By.xpath("//h4[contains(normalize-space(), 'Đăng nhập')]"));
 		return loginTitle.isDisplayed();
 	}

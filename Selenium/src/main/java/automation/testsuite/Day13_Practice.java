@@ -15,7 +15,7 @@ public class Day13_Practice extends CommonBase {
 	}
 
 	@Test
-	public void loginFunction_Successfull() {
+	public void loginSuccess() {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
 		loginPage.loginFunction("admin@gmail.com", "12345678");
 		WebElement resultPage = driver.findElement(By.xpath("//p[text()='Quản lý người dùng']"));
@@ -48,10 +48,10 @@ public class Day13_Practice extends CommonBase {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
 		CRMStar_HomePage homePage = new CRMStar_HomePage(driver);
 		loginPage.loginFunction("admin@gmail.com", "12345678");
-		assertTrue(homePage.isDisplay());
+		assertTrue(homePage.isDisplayed());
 		Thread.sleep(7000);
 		homePage.logout("Đăng xuất");
-		assertTrue(loginPage.isDisplay());
+		assertTrue(loginPage.isDisplayed());
 	}
 
 	@Test
@@ -59,10 +59,10 @@ public class Day13_Practice extends CommonBase {
 		CRMStar_LoginPage loginPage = new CRMStar_LoginPage(driver);
 		CRMStar_HomePage homePage = new CRMStar_HomePage(driver);
 		loginPage.loginFunction("admin@gmail.com", "12345678");
-		assertTrue(homePage.isDisplay());
+		assertTrue(homePage.isDisplayed());
 		Thread.sleep(7000);
 		homePage.logout("Hủy");
-		assertTrue(homePage.isDisplay());
+		assertTrue(homePage.isDisplayed());
 	}
 
 	@AfterMethod
