@@ -5,8 +5,8 @@
     <classes>
       <class name="automation.testsuite.Day13_Practice">
         <methods>
+          <include name="loginSuccess"/>
           <include name="closeDriver"/>
-          <include name="logout_cancel"/>
           <include name="initDriver"/>
         </methods>
       </class> <!-- automation.testsuite.Day13_Practice -->

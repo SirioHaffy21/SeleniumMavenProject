@@ -5,6 +5,7 @@ import java.time.Duration;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.*;
 
 public class CommonBase {
@@ -21,7 +22,12 @@ public class CommonBase {
 
 	public WebDriver initFireFoxDriver(String url) {
 		System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		FirefoxOptions options = new FirefoxOptions();
+		// Disable the “Insecure form submission” warning popup
+		options.addPreference("security.warn_submit_insecure", false);
+		// (Optional) disable insecure field warnings
+		options.addPreference("security.insecure_field_warning.contextual.enabled", false);
+		driver = new FirefoxDriver(options);
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		return driver;
