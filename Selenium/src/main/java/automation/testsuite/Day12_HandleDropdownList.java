@@ -42,7 +42,7 @@ public class Day12_HandleDropdownList extends CommonBase {
 	@AfterMethod
 	public void closeBrowser() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-		driver.close();
+		driver.quit();
 	}
 
 }

@@ -39,4 +39,9 @@ public class BTVN_Day8_1 extends CommonBase{
 		mobileElement.sendKeys("0333666999");
 		System.out.println("Phone Number: " + mobileElement.getText());
 	}
+
+	@AfterMethod
+	public void closeDriver() {
+		driver.quit();
+	}
 }

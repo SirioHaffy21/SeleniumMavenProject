@@ -32,4 +32,9 @@ public class Day12_HandleCheckBox extends CommonBase {
 			System.out.println("Checkbox sport has been selected.");
 		}
 	}
+
+	@AfterMethod
+	public void closeDriver() {
+		driver.quit();
+	}
 }

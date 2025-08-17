@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-16T10:48:46 ICT" name="Default suite" finished-at="2025-08-16T10:48:54 ICT" duration-ms="7879">
+  <suite started-at="2025-08-17T22:22:25 ICT" name="Default suite" finished-at="2025-08-17T22:22:31 ICT" duration-ms="6196">
     <groups>
     </groups>
-    <test started-at="2025-08-16T10:48:46 ICT" name="Default test" finished-at="2025-08-16T10:48:54 ICT" duration-ms="7879">
-      <class name="automation.testsuite.Day13_Practice">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:automation.testsuite.Day13_Practice@53045c6c]" started-at="2025-08-16T10:48:46 ICT" name="initDriver" finished-at="2025-08-16T10:48:51 ICT" duration-ms="5192" status="PASS">
+    <test started-at="2025-08-17T22:22:25 ICT" name="Default test" finished-at="2025-08-17T22:22:31 ICT" duration-ms="6196">
+      <class name="automation.testsuite.LoginTest">
+        <test-method is-config="true" signature="openChromeBrowser()[pri:0, instance:automation.testsuite.LoginTest@19e4653c]" started-at="2025-08-17T22:22:25 ICT" name="openChromeBrowser" finished-at="2025-08-17T22:22:30 ICT" duration-ms="4706" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method signature="loginSuccess()[pri:0, instance:automation.testsuite.Day13_Practice@53045c6c]" started-at="2025-08-16T10:48:51 ICT" name="loginSuccess" finished-at="2025-08-16T10:48:52 ICT" duration-ms="1473" status="PASS">
+        </test-method> <!-- openChromeBrowser -->
+        <test-method signature="loginSuccessfully()[pri:0, instance:automation.testsuite.LoginTest@19e4653c]" started-at="2025-08-17T22:22:30 ICT" name="loginSuccessfully" finished-at="2025-08-17T22:22:31 ICT" duration-ms="1141" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginSuccess -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.Day13_Practice@53045c6c]" started-at="2025-08-16T10:48:52 ICT" name="closeDriver" finished-at="2025-08-16T10:48:54 ICT" duration-ms="1137" status="PASS">
+        </test-method> <!-- loginSuccessfully -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:automation.testsuite.LoginTest@19e4653c]" started-at="2025-08-17T22:22:31 ICT" name="closeDriver" finished-at="2025-08-17T22:22:31 ICT" duration-ms="271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- automation.testsuite.Day13_Practice -->
+      </class> <!-- automation.testsuite.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

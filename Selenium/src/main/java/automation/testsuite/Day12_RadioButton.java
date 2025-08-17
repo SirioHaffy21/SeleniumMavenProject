@@ -61,6 +61,6 @@ public class Day12_RadioButton extends CommonBase {
 	@AfterMethod
 	public void closeBrowser() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-		driver.close();
+		driver.quit();
 	}
 }

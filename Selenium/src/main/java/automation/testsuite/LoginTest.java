@@ -14,7 +14,7 @@ import automation.pageLocator.LoginPage;
 public class LoginTest extends CommonBase {
 	@BeforeMethod
 	public void openChromeBrowser() {
-		driver = initFireFoxDriver(CT_PageURL.ALADA_URL);
+		driver = initChromeDriver(CT_PageURL.ALADA_URL);
 	}
 
 	// Case 1: Login success
@@ -63,6 +63,6 @@ public class LoginTest extends CommonBase {
 	@AfterMethod
 	public void closeDriver() {
 		if (driver != null)
-			driver.close();
+			driver.quit();
 	}
 }

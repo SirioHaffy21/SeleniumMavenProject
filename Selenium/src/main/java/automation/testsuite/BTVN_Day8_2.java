@@ -35,4 +35,9 @@ public class BTVN_Day8_2 extends CommonBase {
 		WebElement fouthPassElement = driver.findElement(By.name("password"));
 		System.out.println("Fouth Element: " + fouthPassElement);
 	}
+
+	@AfterMethod
+	public void closeDriver() {
+		driver.quit();
+	}
 }

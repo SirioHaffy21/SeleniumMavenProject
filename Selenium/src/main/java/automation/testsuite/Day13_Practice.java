@@ -66,6 +66,6 @@ public class Day13_Practice extends CommonBase {
 
 	@AfterMethod
 	public void closeDriver() {
-		driver.close();
+		driver.quit();
 	}
 }

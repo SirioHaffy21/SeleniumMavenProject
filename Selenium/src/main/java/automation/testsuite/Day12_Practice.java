@@ -75,6 +75,6 @@ public class Day12_Practice extends CommonBase {
 
 	@AfterMethod
 	public void endProcess() {
-		driver.close();
+		driver.quit();
 	}
 }

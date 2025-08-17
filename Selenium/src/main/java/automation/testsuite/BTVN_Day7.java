@@ -2,10 +2,11 @@ package automation.testsuite;
 
 import java.util.Scanner;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class BTVN_Day7 {
-	@Test
+	//@Test
 	private void NhanVien() {
 		Scanner scanner = new Scanner(System.in);
 		Scanner scanName = new Scanner(System.in);
