@@ -1,17 +1,14 @@
 package automation.pageLocator;
 
-import static org.testng.Assert.assertEquals;
-
-import java.time.Duration;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ALADA_LoginLogoutPageFactory {
+public class ALADA_LoginPageFactory {
 	private WebDriver driver;
-	private WebDriverWait wait;
+	@FindBy(xpath = "//a[text()='Đăng Nhập']")
+	@CacheLookup
+	private WebElement loginNavigate;
+
 	@FindBy(id = "txtLoginUsername")
 	@CacheLookup
 	private WebElement emailInput;
@@ -24,35 +21,27 @@ public class ALADA_LoginLogoutPageFactory {
 	@CacheLookup
 	private WebElement loginButton;
 
-	@FindBy(xpath = "//div[@class='avatar2']")
-	private WebElement accountImg;
-
-	@FindBy(xpath = "//a[text()='Thoát']")
-	private WebElement exitButton;
-
 	@FindBy(xpath = "//a[text()='Đăng Nhập']")
 	private WebElement menu_LoginButton;
 
-	public ALADA_LoginLogoutPageFactory(WebDriver driver) {
+	public ALADA_LoginPageFactory(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		PageFactory.initElements(driver, this);
 	}
 
 	public void loginFunction(String email, String pass) {
+		if (loginNavigate.isEnabled())
+			loginNavigate.click();
+		else
+			return;
+
 		emailInput.clear();
 		emailInput.sendKeys(email);
 		passInput.clear();
 		passInput.sendKeys(pass);
 
-		if(loginButton.isEnabled())
+		if (loginButton.isEnabled())
 			loginButton.click();
-	}
-
-	public void logoutFunction() {
-
-		accountImg.click();
-		exitButton.click();
 	}
 
 	public boolean isDisplayLogin() {

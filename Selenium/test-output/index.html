@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Admin\AppData\Local\Temp\testng-eclipse-1225344599\testng-customsuite.xml</span>
+                    <span>C:\Users\Admin\AppData\Local\Temp\testng-eclipse--1715547338\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="automation.testsuite.LoginTest" class="method navigator-link" hash-for-method="loginSuccessfully">loginSuccessfully</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="automation.testsuite.Day14_Practice" class="method navigator-link" hash-for-method="changePass">changePass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="automation.testsuite.Day14_Practice" class="method navigator-link" hash-for-method="checkRegister">checkRegister</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="automation.testsuite.Day14_Practice" class="method navigator-link" hash-for-method="loginSuccess">loginSuccess</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +131,28 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">automation.testsuite.LoginTest</span>
+              <span class="class-name">automation.testsuite.Day14_Practice</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginSuccessfully">
-                  </a> <!-- loginSuccessfully -->
-                  <span class="method-name">loginSuccessfully</span>
+                  <a name="changePass">
+                  </a> <!-- changePass -->
+                  <span class="method-name">changePass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkRegister">
+                  </a> <!-- checkRegister -->
+                  <span class="method-name">checkRegister</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginSuccess">
+                  </a> <!-- loginSuccess -->
+                  <span class="method-name">loginSuccess</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +160,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Admin\AppData\Local\Temp\testng-eclipse-1225344599\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Admin\AppData\Local\Temp\testng-eclipse--1715547338\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +169,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;automation.testsuite.LoginTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;loginSuccessfully&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- automation.testsuite.LoginTest --&gt;
+      &lt;class name=&quot;automation.testsuite.Day14_Practice&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginSuccessfully')
-data.setCell(0, 2, 'automation.testsuite.LoginTest')
-data.setCell(0, 3, 1141);
+data.setCell(0, 1, 'changePass')
+data.setCell(0, 2, 'automation.testsuite.Day14_Practice')
+data.setCell(0, 3, 5352);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'checkRegister')
+data.setCell(1, 2, 'automation.testsuite.Day14_Practice')
+data.setCell(1, 3, 4858);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'loginSuccess')
+data.setCell(2, 2, 'automation.testsuite.Day14_Practice')
+data.setCell(2, 3, 1548);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -213,20 +241,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">automation.testsuite.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginFailWithBlank</span>
-                <br/>
-                <span class="ignored-method-name">loginFail_IncorrectPassword</span>
-                <br/>
-                <span class="ignored-method-name">loginFail_IncorrectUsername</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -235,18 +252,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">automation.testsuite.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">automation.testsuite.Day14_Practice</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">openChromeBrowser</span>
+                <span class="method-name">initProcess</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginSuccessfully</span>
-                <span class="method-start">4708 ms</span>
+                <span class="method-name">checkRegister</span>
+                <span class="method-start">3642 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeDriver</span>
-                <span class="method-start">5854 ms</span>
+                <span class="method-name">endProcess</span>
+                <span class="method-start">8504 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initProcess</span>
+                <span class="method-start">8720 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginSuccess</span>
+                <span class="method-start">12017 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endProcess</span>
+                <span class="method-start">13567 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initProcess</span>
+                <span class="method-start">13794 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">changePass</span>
+                <span class="method-start">16686 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">endProcess</span>
+                <span class="method-start">22040 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

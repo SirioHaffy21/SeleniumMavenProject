@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 
 import automation.common.CommonBase;
 import automation.constant.CT_PageURL;
-import automation.pageLocator.ALADA_LoginLogoutPageFactory;
+import automation.pageLocator.*;
 
 public class Alada_LoginTest extends CommonBase {
 	@BeforeMethod
@@ -18,7 +18,7 @@ public class Alada_LoginTest extends CommonBase {
 
 	@Test
 	public void loginSuccessfully() {
-		ALADA_LoginLogoutPageFactory factory = new ALADA_LoginLogoutPageFactory(driver);
+		ALADA_LoginPageFactory factory = new ALADA_LoginPageFactory(driver);
 		factory.loginFunction("nva@gmail.com", "123456");
 		WebElement khoahocCuatoi = driver.findElement(By.xpath("//a[text() = 'Khóa học của tôi']"));
 		assertTrue(khoahocCuatoi.isDisplayed());
@@ -27,9 +27,10 @@ public class Alada_LoginTest extends CommonBase {
 	@Test
 	public void logoutSuccessfully() {
 
-		loginSuccessfully();
-		ALADA_LoginLogoutPageFactory factory = new ALADA_LoginLogoutPageFactory(driver);
-		factory.logoutFunction();
+		ALADA_LoginPageFactory factory = new ALADA_LoginPageFactory(driver);
+		factory.loginFunction("nva@gmail.com", "123456");
+		ALADA_HomePageFactory factoryHome = new ALADA_HomePageFactory(driver);
+		factoryHome.logoutFunction();
 
 		assertTrue(factory.isDisplayLogin());
 	}
