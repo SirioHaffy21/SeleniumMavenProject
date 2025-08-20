@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.Day14_Practice">
+      <class name="automation.testsuite.TEDU_UpdatePass_Test">
         <methods>
-          <include name="loginSuccess"/>
-          <include name="changePass"/>
-          <include name="endProcess"/>
-          <include name="initProcess"/>
+          <include name="openBrowser"/>
+          <include name="updatePassSuccess"/>
         </methods>
-      </class> <!-- automation.testsuite.Day14_Practice -->
+      </class> <!-- automation.testsuite.TEDU_UpdatePass_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

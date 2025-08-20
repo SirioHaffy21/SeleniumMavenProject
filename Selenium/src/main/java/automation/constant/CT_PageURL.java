@@ -10,4 +10,5 @@ public class CT_PageURL {
 	public static String GLOBALQA_URL = "https://www.globalsqa.com/demo-site/select-dropdown-menu/";
 	public static String STARCRM_URL = "http://test-system.crmstar.vn/";
 	public static String ALADA_URL_2 = "https://alada.vn/";
+	public static String TEDU_URL = "https://tedu.com.vn/dang-nhap.html";
 }
