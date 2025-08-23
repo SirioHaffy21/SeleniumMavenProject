@@ -19,6 +19,7 @@ public class CommonBase {
 		options.addArguments("--disable-features=PasswordLeakDetection");
 		driver = new ChromeDriver(options);
 		driver.get(url);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		return driver;
 	}

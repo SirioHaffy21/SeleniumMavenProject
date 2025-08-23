@@ -27,6 +27,10 @@ public class TEDU_PageFactory {
 	WebElement buttonUpdate;
 	@FindBy(id = "onesignal-slidedown-cancel-button")
 	WebElement laterButton;
+	@FindBy(xpath = "//input[@placeholder='Tìm bất cứ thứ gì mà bạn muốn']")
+	WebElement searchBox;
+	@FindBy(xpath = "//button[contains(@class, 'search')]")
+	WebElement buttonSearch;
 
 	/**
 	 * @param driver
@@ -57,5 +61,11 @@ public class TEDU_PageFactory {
 		textNewPass.sendKeys(newPass);
 		textConfirmPass.sendKeys(newPass);
 		buttonUpdate.click();
+	}
+
+	public void search(String text) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].value='" + text + "';", searchBox);
+		js.executeScript("arguments[0].click();", buttonSearch);
 	}
 }
