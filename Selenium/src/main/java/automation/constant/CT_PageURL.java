@@ -11,4 +11,6 @@ public class CT_PageURL {
 	public static String STARCRM_URL = "http://test-system.crmstar.vn/";
 	public static String ALADA_URL_2 = "https://alada.vn/";
 	public static String TEDU_URL = "https://tedu.com.vn/dang-nhap.html";
+	public static String GURU_URL = "https://demo.guru99.com/test/delete_customer.php";
+	public static String AUTOMATION_TEST = "https://demo.automationtesting.in/Alerts.html";
 }
