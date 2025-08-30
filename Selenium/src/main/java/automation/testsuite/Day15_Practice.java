@@ -15,8 +15,8 @@ import automation.pageLocator.TEDU_PageFactory;
 
 public class Day15_Practice extends CommonBase {
 	TEDU_PageFactory tedu;
-	private String pass = "spiderman_12345";
-	private String newPass = "spiderman_1234";
+	private String pass = "spiderman_1234";
+	private String newPass = "spiderman_12345";
 	private String searchText = "Web API";
 
 	@BeforeMethod
@@ -44,13 +44,13 @@ public class Day15_Practice extends CommonBase {
 	@Test
 	public void search() throws InterruptedException {
 		loginSuccessfully();
-		tedu.search("Web API");
-		Thread.sleep(3000);
+		tedu.search(searchText);
+		Thread.sleep(6000);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		
-		//div[@class='post-title']//h3/a]
-		//Thread.sleep(3000);
+
+		// div[@class='post-title']//h3/a]
+		// Thread.sleep(3000);
 //		@SuppressWarnings("unchecked")
 //		List<WebElement> resultsTitle = (List<WebElement>) js.executeScript(
 //				"var xpath = \"//h3//a[contains(@title,'" + searchText.toUpperCase() + "')]\";" +
@@ -83,17 +83,26 @@ public class Day15_Practice extends CommonBase {
 		List<WebElement> resultsContent = driver.findElements(By.xpath("//div[@class='post-content']/p"));
 
 		assertTrue(resultsTitle.size() > 0);
-		
+
+		int i = 0, j = 0;
+
 		for (WebElement content : resultsTitle) {
-			String text = content.getText().toLowerCase();
-			if(!text.contains(searchText))
+			String titleText = content.getText().toLowerCase();
+			if (!titleText.contains(searchText.toLowerCase()))
 				for (WebElement content2 : resultsContent) {
-					String contentText = content2.getText();
-					assertTrue(contentText.contains("Web API") | contentText.contains("WebAPI"));
+					if (j != i) {
+						j++;
+					} else {
+						String contentText = content2.getText().toLowerCase();
+						assertTrue(contentText.contains("Web API".toLowerCase())
+								| contentText.contains("WebAPI".toLowerCase()));
+						break;
+					}
 				}
 			else {
-				assertTrue(text.contains("Web API"));
+				assertTrue(titleText.contains("Web API".toLowerCase()));
 			}
+			i++;
 		}
 	}
 

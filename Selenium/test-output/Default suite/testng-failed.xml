@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.Day16_AlertPractice">
+      <class name="automation.testsuite.Day16_Practice_2">
         <methods>
-          <include name="hanldeAlertWithOkCancel"/>
           <include name="initProcess"/>
+          <include name="endProcess"/>
+          <include name="testTryIt"/>
         </methods>
-      </class> <!-- automation.testsuite.Day16_AlertPractice -->
+      </class> <!-- automation.testsuite.Day16_Practice_2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

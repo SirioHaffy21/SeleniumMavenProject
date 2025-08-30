@@ -1,7 +1,6 @@
 package automation.common;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
@@ -11,8 +10,8 @@ import org.openqa.selenium.support.ui.*;
 public class CommonBase {
 
 	public static WebDriver driver;
-	public int initWaitTime = 90;
-	WebDriverWait wait;
+	public int initWaitTime = 30;
+	public static WebDriverWait wait;
 
 	public WebDriver initChromeDriver(String url) {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
@@ -188,6 +187,11 @@ public class CommonBase {
 
 		uploadInput.sendKeys(filePath);
 
+	}
+	
+	public String getText(By locator) {
+		WebElement element = getElementPresentDOM(locator);
+		return element.getText();
 	}
 
 	public WebElement getElementPresentDOM(By locator) {

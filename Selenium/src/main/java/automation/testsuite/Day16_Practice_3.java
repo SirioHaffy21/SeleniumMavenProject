@@ -4,14 +4,14 @@ import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
 import org.testng.annotations.*;
 
 import automation.common.CommonBase;
 import automation.constant.CT_PageURL;
 
-public class Day16_AlertPracticeTrue extends CommonBase {
+public class Day16_Practice_3 extends CommonBase {
 	private String name = "Monkey D. Luffy";
 
 	@BeforeMethod
