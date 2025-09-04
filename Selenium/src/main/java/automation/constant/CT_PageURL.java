@@ -12,6 +12,10 @@ public class CT_PageURL {
 	public static String ALADA_URL_2 = "https://alada.vn/";
 	public static String TEDU_URL = "https://tedu.com.vn/dang-nhap.html";
 	public static String GURU_URL = "https://demo.guru99.com/test/delete_customer.php";
+	public static String GURU_POPUP_URL = "https://demo.guru99.com/popup.php";
 	public static String AUTOMATION_TEST = "https://demo.automationtesting.in/Alerts.html";
 	public static String BLOGPOST_URL = "https://seleniumpractise.blogspot.com/2019/01/alert-demo.html";
+	public static String DIENMAY_URL = "https://dienmaynhapkhaugiare.com.vn";
+	public static String MEDIAMART_URL = "https://mediamart.vn/";
+	public static String CODESTAR_IFRAME_URL = "https://codestar.vn/";
 }

@@ -24,7 +24,7 @@ public class Day16_Practice_1 extends CommonBase {
 	}
 
 	// Test login success
-	@Test
+	@Test(priority = 1)
 	public void loginSucess() throws InterruptedException {
 		crmStar.loginFunction(email, pass);
 		Thread.sleep(5000);
@@ -32,24 +32,29 @@ public class Day16_Practice_1 extends CommonBase {
 	}
 
 	// Test add work areas
-	@Test
+	@Test(priority = 2)
 	public void addWorkAreas() throws InterruptedException {
 		loginSucess();
 		crmStar.addNewWorkArea(code, name);
 		Thread.sleep(6000);
 		crmStar.searchWorkArea(name);
 		Thread.sleep(3000);
-		assertTrue(crmStar.isFindElementAdd());
+		assertTrue(crmStar.isFindElementAdd(code));
 	}
 
 	// Test delete work areas
-	@Test
+	@Test(priority = 3)
 	public void deleteWorkAreas() throws InterruptedException {
-		addWorkAreas();
-		Thread.sleep(5000);
-		crmStar.deleteWorkAreas();
+		loginSucess();
+		crmStar.addNewWorkArea(code, name);
+		Thread.sleep(6000);
+		crmStar.searchWorkArea(name);
 		Thread.sleep(3000);
-		assertTrue(crmStar.isFindElementAdd());
+		assertTrue(crmStar.isFindElementAdd(code));
+		Thread.sleep(5000);
+		crmStar.deleteWorkAreas(code);
+		Thread.sleep(3000);
+		assertTrue(crmStar.isFindElementAdd(code) == false);
 	}
 
 	@AfterMethod

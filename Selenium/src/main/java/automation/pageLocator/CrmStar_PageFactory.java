@@ -52,17 +52,18 @@ public class CrmStar_PageFactory extends CommonBase {
 		click(addBtn);
 	}
 
-	public void deleteWorkAreas() {
-		if (isFindElementAdd()) {
+	public void deleteWorkAreas(String code) {
+		if (isFindElementAdd(code)) {
 			click(deleteBtn);
 			driver.switchTo().alert().accept();
 		}
 	}
 
-	public boolean isFindElementAdd() {
-		String text = getText(timeElementAdd);
-		By elementCreated = By.xpath("//tr//td[text()='" + text + "']");
-		return isElementDisplayed(elementCreated);
+	public boolean isFindElementAdd(String code) {
+		// td[text()='newHanoi1']/following-sibling::td[text()='Hanoi1']/following-sibling::td/a[normalize-space()='Xóa']
+		By elementAdd = By.xpath("//td[text()='" + code
+				+ "']/following-sibling::td[text()='Hanoi1']/following-sibling::td/a[normalize-space()='Xóa']");
+		return isElementDisplayed(elementAdd);
 	}
 
 	public void searchWorkArea(String name) {

@@ -161,6 +161,13 @@ public class CommonBase {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 		element.click();
 	}
+	
+	public void clickByJS(By locator)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement element = driver.findElement(locator);
+		js.executeScript("arguments[0].click();", element);
+	}
 
 	/**
 	 * type to element

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.Day16_Practice_2">
+      <class name="automation.testsuite.Day17_iFrame">
         <methods>
-          <include name="initProcess"/>
-          <include name="endProcess"/>
-          <include name="testTryIt"/>
+          <include name="handleiFrame"/>
+          <include name="init"/>
+          <include name="quit"/>
         </methods>
-      </class> <!-- automation.testsuite.Day16_Practice_2 -->
+      </class> <!-- automation.testsuite.Day17_iFrame -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
