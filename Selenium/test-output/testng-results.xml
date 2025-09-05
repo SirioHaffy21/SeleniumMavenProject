@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-03T21:14:11 GMT+07:00" name="Default suite" finished-at="2025-09-03T21:14:17 GMT+07:00" duration-ms="6359">
+  <suite started-at="2025-09-06T01:06:13 GMT+07:00" name="Default suite" finished-at="2025-09-06T01:06:23 GMT+07:00" duration-ms="10075">
     <groups>
     </groups>
-    <test started-at="2025-09-03T21:14:11 GMT+07:00" name="Default test" finished-at="2025-09-03T21:14:17 GMT+07:00" duration-ms="6359">
-      <class name="automation.testsuite.Day17_iFrame">
-        <test-method is-config="true" signature="init()[pri:0, instance:automation.testsuite.Day17_iFrame@279fedbd]" started-at="2025-09-03T21:14:11 GMT+07:00" name="init" finished-at="2025-09-03T21:14:14 GMT+07:00" duration-ms="3365" status="PASS">
+    <test started-at="2025-09-06T01:06:13 GMT+07:00" name="Default test" finished-at="2025-09-06T01:06:23 GMT+07:00" duration-ms="10075">
+      <class name="automation.testsuite.Day17_Practice_1">
+        <test-method is-config="true" signature="initProcess()[pri:0, instance:automation.testsuite.Day17_Practice_1@3a52dba3]" started-at="2025-09-06T01:06:13 GMT+07:00" name="initProcess" finished-at="2025-09-06T01:06:17 GMT+07:00" duration-ms="4268" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="handleiFrame()[pri:0, instance:automation.testsuite.Day17_iFrame@279fedbd]" started-at="2025-09-03T21:14:14 GMT+07:00" name="handleiFrame" finished-at="2025-09-03T21:14:17 GMT+07:00" duration-ms="2543" status="PASS">
+        </test-method> <!-- initProcess -->
+        <test-method signature="testZaloIframe()[pri:0, instance:automation.testsuite.Day17_Practice_1@3a52dba3]" started-at="2025-09-06T01:06:17 GMT+07:00" name="testZaloIframe" finished-at="2025-09-06T01:06:22 GMT+07:00" duration-ms="4773" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- handleiFrame -->
-        <test-method is-config="true" signature="quit()[pri:0, instance:automation.testsuite.Day17_iFrame@279fedbd]" started-at="2025-09-03T21:14:17 GMT+07:00" name="quit" finished-at="2025-09-03T21:14:17 GMT+07:00" duration-ms="398" status="PASS">
+        </test-method> <!-- testZaloIframe -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day17_Practice_1@3a52dba3]" started-at="2025-09-06T01:06:22 GMT+07:00" name="endProcess" finished-at="2025-09-06T01:06:23 GMT+07:00" duration-ms="899" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quit -->
-      </class> <!-- automation.testsuite.Day17_iFrame -->
+        </test-method> <!-- endProcess -->
+      </class> <!-- automation.testsuite.Day17_Practice_1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
