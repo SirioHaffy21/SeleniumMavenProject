@@ -5,22 +5,22 @@
 	<test name="Regression Test on Chrome">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="automation.testsuite.Day17_iFrame" /> 
-			<class name="automation.testsuite.Alada_LoginTest" /> 
+			<class name="automation.testsuite.Day18_Practice_1" /> 
+			<class name="automation.testsuite.Day18_Practice_2" /> 
 		</classes>	
 	</test> 
 	<test name="Regression Test on Egde">
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="automation.testsuite.Day17_iFrame" /> 
-			<class name="automation.testsuite.Alada_LoginTest" /> 
+			<class name="automation.testsuite.Day18_Practice_1" /> 
+			<class name="automation.testsuite.Day18_Practice_2" /> 
 		</classes>	
 	</test> 
 	<test name="Regression Test on Firefox">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="automation.testsuite.Day17_iFrame" /> 
-			<class name="automation.testsuite.Alada_LoginTest" /> 
+			<class name="automation.testsuite.Day18_Practice_1" /> 
+			<class name="automation.testsuite.Day18_Practice_2" /> 
 		</classes>	
 	</test> 
 	

@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-07T21:22:56 GMT+07:00" name="Default suite" finished-at="2025-09-07T21:23:06 GMT+07:00" duration-ms="10666">
+  <suite started-at="2025-09-08T21:03:06 GMT+07:00" name="TestSuite" finished-at="2025-09-08T21:04:46 GMT+07:00" duration-ms="99660">
     <groups>
     </groups>
-    <test started-at="2025-09-07T21:22:56 GMT+07:00" name="Default test" finished-at="2025-09-07T21:23:06 GMT+07:00" duration-ms="10666">
-      <class name="automation.testsuite.Alada_LoginTest">
-        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Alada_LoginTest@61322f9d]" started-at="2025-09-07T21:22:56 GMT+07:00" name="initProcess" finished-at="2025-09-07T21:22:59 GMT+07:00" duration-ms="3299" status="PASS">
+    <test started-at="2025-09-08T21:03:06 GMT+07:00" name="Regression Test on Chrome" finished-at="2025-09-08T21:03:35 GMT+07:00" duration-ms="28929">
+      <class name="automation.testsuite.Day18_Practice_2">
+        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Day18_Practice_2@6a2f6f80]" started-at="2025-09-08T21:03:23 GMT+07:00" name="initProcess" finished-at="2025-09-08T21:03:28 GMT+07:00" duration-ms="5687" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initProcess -->
+        <test-method signature="checkZaloChat()[pri:0, instance:automation.testsuite.Day18_Practice_2@6a2f6f80]" started-at="2025-09-08T21:03:28 GMT+07:00" name="checkZaloChat" finished-at="2025-09-08T21:03:35 GMT+07:00" duration-ms="6442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkZaloChat -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day18_Practice_2@6a2f6f80]" started-at="2025-09-08T21:03:35 GMT+07:00" name="endProcess" finished-at="2025-09-08T21:03:35 GMT+07:00" duration-ms="567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- automation.testsuite.Day18_Practice_2 -->
+      <class name="automation.testsuite.Day18_Practice_1">
+        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Day18_Practice_1@65e98b1c]" started-at="2025-09-08T21:03:06 GMT+07:00" name="initProcess" finished-at="2025-09-08T21:03:15 GMT+07:00" duration-ms="8998" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initProcess -->
+        <test-method signature="testZaloIcon()[pri:0, instance:automation.testsuite.Day18_Practice_1@65e98b1c]" started-at="2025-09-08T21:03:15 GMT+07:00" name="testZaloIcon" finished-at="2025-09-08T21:03:22 GMT+07:00" duration-ms="6287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZaloIcon -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day18_Practice_1@65e98b1c]" started-at="2025-09-08T21:03:22 GMT+07:00" name="endProcess" finished-at="2025-09-08T21:03:23 GMT+07:00" duration-ms="876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- automation.testsuite.Day18_Practice_1 -->
+    </test> <!-- Regression Test on Chrome -->
+    <test started-at="2025-09-08T21:03:35 GMT+07:00" name="Regression Test on Egde" finished-at="2025-09-08T21:04:05 GMT+07:00" duration-ms="29879">
+      <class name="automation.testsuite.Day18_Practice_2">
+        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Day18_Practice_2@32910148]" started-at="2025-09-08T21:03:51 GMT+07:00" name="initProcess" finished-at="2025-09-08T21:03:58 GMT+07:00" duration-ms="6793" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +62,80 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initProcess -->
-        <test-method signature="logoutSuccessfully()[pri:0, instance:automation.testsuite.Alada_LoginTest@61322f9d]" started-at="2025-09-07T21:22:59 GMT+07:00" name="logoutSuccessfully" finished-at="2025-09-07T21:23:06 GMT+07:00" duration-ms="6868" status="PASS">
+        <test-method signature="checkZaloChat()[pri:0, instance:automation.testsuite.Day18_Practice_2@32910148]" started-at="2025-09-08T21:03:58 GMT+07:00" name="checkZaloChat" finished-at="2025-09-08T21:04:04 GMT+07:00" duration-ms="6939" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logoutSuccessfully -->
-        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Alada_LoginTest@61322f9d]" started-at="2025-09-07T21:23:06 GMT+07:00" name="endProcess" finished-at="2025-09-07T21:23:06 GMT+07:00" duration-ms="443" status="PASS">
+        </test-method> <!-- checkZaloChat -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day18_Practice_2@32910148]" started-at="2025-09-08T21:04:04 GMT+07:00" name="endProcess" finished-at="2025-09-08T21:04:05 GMT+07:00" duration-ms="749" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endProcess -->
-      </class> <!-- automation.testsuite.Alada_LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- automation.testsuite.Day18_Practice_2 -->
+      <class name="automation.testsuite.Day18_Practice_1">
+        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Day18_Practice_1@672872e1]" started-at="2025-09-08T21:03:35 GMT+07:00" name="initProcess" finished-at="2025-09-08T21:03:44 GMT+07:00" duration-ms="8323" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initProcess -->
+        <test-method signature="testZaloIcon()[pri:0, instance:automation.testsuite.Day18_Practice_1@672872e1]" started-at="2025-09-08T21:03:44 GMT+07:00" name="testZaloIcon" finished-at="2025-09-08T21:03:50 GMT+07:00" duration-ms="6352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZaloIcon -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day18_Practice_1@672872e1]" started-at="2025-09-08T21:03:50 GMT+07:00" name="endProcess" finished-at="2025-09-08T21:03:51 GMT+07:00" duration-ms="707" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- automation.testsuite.Day18_Practice_1 -->
+    </test> <!-- Regression Test on Egde -->
+    <test started-at="2025-09-08T21:04:05 GMT+07:00" name="Regression Test on Firefox" finished-at="2025-09-08T21:04:46 GMT+07:00" duration-ms="40772">
+      <class name="automation.testsuite.Day18_Practice_2">
+        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Day18_Practice_2@fd07cbb]" started-at="2025-09-08T21:04:24 GMT+07:00" name="initProcess" finished-at="2025-09-08T21:04:38 GMT+07:00" duration-ms="13838" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initProcess -->
+        <test-method signature="checkZaloChat()[pri:0, instance:automation.testsuite.Day18_Practice_2@fd07cbb]" started-at="2025-09-08T21:04:38 GMT+07:00" name="checkZaloChat" finished-at="2025-09-08T21:04:45 GMT+07:00" duration-ms="6580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkZaloChat -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day18_Practice_2@fd07cbb]" started-at="2025-09-08T21:04:45 GMT+07:00" name="endProcess" finished-at="2025-09-08T21:04:46 GMT+07:00" duration-ms="1280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- automation.testsuite.Day18_Practice_2 -->
+      <class name="automation.testsuite.Day18_Practice_1">
+        <test-method is-config="true" signature="initProcess(java.lang.String)[pri:0, instance:automation.testsuite.Day18_Practice_1@2b4bac49]" started-at="2025-09-08T21:04:05 GMT+07:00" name="initProcess" finished-at="2025-09-08T21:04:16 GMT+07:00" duration-ms="10851" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initProcess -->
+        <test-method signature="testZaloIcon()[pri:0, instance:automation.testsuite.Day18_Practice_1@2b4bac49]" started-at="2025-09-08T21:04:16 GMT+07:00" name="testZaloIcon" finished-at="2025-09-08T21:04:23 GMT+07:00" duration-ms="6983" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testZaloIcon -->
+        <test-method is-config="true" signature="endProcess()[pri:0, instance:automation.testsuite.Day18_Practice_1@2b4bac49]" started-at="2025-09-08T21:04:23 GMT+07:00" name="endProcess" finished-at="2025-09-08T21:04:24 GMT+07:00" duration-ms="1233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- automation.testsuite.Day18_Practice_1 -->
+    </test> <!-- Regression Test on Firefox -->
+  </suite> <!-- TestSuite -->
 </testng-results>

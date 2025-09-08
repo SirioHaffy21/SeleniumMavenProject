@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Regression Test on Chrome(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="automation.testsuite.Alada_LoginTest">
-        <methods>
-          <include name="endProcess"/>
-          <include name="initProcess"/>
-          <include name="logoutSuccessfully"/>
-        </methods>
-      </class> <!-- automation.testsuite.Alada_LoginTest -->
-    </classes>
-  </test> <!-- Regression Test on Chrome(failed) -->
   <test thread-count="5" name="Regression Test on Firefox(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="automation.testsuite.Alada_LoginTest">
+      <class name="automation.testsuite.Day18_Practice_2">
         <methods>
-          <include name="endProcess"/>
           <include name="initProcess"/>
-          <include name="logoutSuccessfully"/>
+          <include name="endProcess"/>
+          <include name="checkZaloChat"/>
         </methods>
-      </class> <!-- automation.testsuite.Alada_LoginTest -->
+      </class> <!-- automation.testsuite.Day18_Practice_2 -->
+      <class name="automation.testsuite.Day18_Practice_1">
+        <methods>
+          <include name="initProcess"/>
+          <include name="endProcess"/>
+          <include name="testZaloIcon"/>
+        </methods>
+      </class> <!-- automation.testsuite.Day18_Practice_1 -->
     </classes>
   </test> <!-- Regression Test on Firefox(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

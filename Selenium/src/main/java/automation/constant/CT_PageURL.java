@@ -15,7 +15,8 @@ public class CT_PageURL {
 	public static String GURU_POPUP_URL = "https://demo.guru99.com/popup.php";
 	public static String AUTOMATION_TEST = "https://demo.automationtesting.in/Alerts.html";
 	public static String BLOGPOST_URL = "https://seleniumpractise.blogspot.com/2019/01/alert-demo.html";
-	public static String DIENMAY_URL = "https://dienmaynhapkhaugiare.com.vn";
+	public static String DIENMAY_URL = "https://dienmaynhapkhaugiare.com.vn/";
 	public static String MEDIAMART_URL = "https://mediamart.vn/";
 	public static String CODESTAR_IFRAME_URL = "https://codestar.vn/";
+	public static String BEPANTOAN_URL = "https://bepantoan.vn/";
 }
