@@ -1,19 +1,22 @@
 package automation.common;
 
 import java.time.Duration;
+import java.util.*;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.*;
+import org.openqa.selenium.edge.*;
 import org.openqa.selenium.firefox.*;
 import org.openqa.selenium.support.ui.*;
 
 public class CommonBase {
 
-	public static WebDriver driver;
-	public int initWaitTime = 30;
-	public static WebDriverWait wait;
+	protected static WebDriver driver;
+	protected int initWaitTime = 30;
+	protected static WebDriverWait wait;
 
-	public WebDriver initChromeDriver(String url) {
+	protected WebDriver initChromeDriver(String url) {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-save-password-bubble");
@@ -25,7 +28,7 @@ public class CommonBase {
 		return driver;
 	}
 
-	public WebDriver initFireFoxDriver(String url) {
+	protected WebDriver initFireFoxDriver(String url) {
 		System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
 		FirefoxOptions options = new FirefoxOptions();
 		// Disable the “Insecure form submission” warning popup
@@ -34,9 +37,54 @@ public class CommonBase {
 		options.addPreference("security.insecure_field_warning.contextual.enabled", false);
 		driver = new FirefoxDriver(options);
 		driver.get(url);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
 		return driver;
 	}
+
+	protected WebDriver initMSEdgeDriver(String url) {
+		System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\driver\\msedgedriver.exe");
+		EdgeOptions options = new EdgeOptions();
+		// Disable the “Insecure form submission” warning popup
+		Map<String, Object> prefs = new HashMap<>();
+		prefs.put("security.warn_submit_insecure", false);
+		// (Optional) disable insecure field warnings
+		prefs.put("security.insecure_field_warning.contextual.enabled", false);
+
+		options.setExperimentalOption("prefs", prefs);
+
+		driver = new EdgeDriver(options);
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+
+	public WebDriver setupDriver(String browserName, String url) {
+		switch (browserName.trim().toLowerCase()) {
+		case "chrome":
+			driver = initChromeDriver(url);
+			break;
+		case "firefox":
+			driver = initFireFoxDriver(url);
+			break;
+		case "edge":
+			driver = initMSEdgeDriver(url);
+			break;
+		default:
+			System.out.println("Browser name is invalid, Launching Chrome as browser of choice...");
+			driver = initChromeDriver(url);
+		}
+
+		return driver;
+	}
+
+	/**
+	 * input text by javascript innerHTML
+	 * 
+	 * @param inputElement
+	 * @param companyName
+	 */
 
 	public void inputTextJavaScriptInnerHTML(By inputElement, String companyName) {
 		WebElement element = driver.findElement(inputElement);
@@ -161,9 +209,8 @@ public class CommonBase {
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 		element.click();
 	}
-	
-	public void clickByJS(By locator)
-	{
+
+	public void clickByJS(By locator) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element = driver.findElement(locator);
 		js.executeScript("arguments[0].click();", element);
@@ -195,7 +242,7 @@ public class CommonBase {
 		uploadInput.sendKeys(filePath);
 
 	}
-	
+
 	public String getText(By locator) {
 		WebElement element = getElementPresentDOM(locator);
 		return element.getText();
@@ -239,6 +286,58 @@ public class CommonBase {
 			dr.manage().timeouts().implicitlyWait(Duration.ofSeconds(initWaitTime));
 			dr.manage().deleteAllCookies();
 			dr.close();
+		}
+	}
+
+	private WebDriver initChromeDriver() {
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+
+	private WebDriver initFireFoxDriver() {
+		System.setProperty("webdriver.firefox.driver", System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+
+	private WebDriver initMSEdgeDriver() {
+		System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\driver\\msedgedriver.exe");
+		driver = new EdgeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(initWaitTime));
+		return driver;
+	}
+
+	public WebDriver setupDriver(String browserName) {
+		switch (browserName.trim().toLowerCase()) {
+		case "firefox":
+			System.out.println("Firefox is selected");
+			driver = initFireFoxDriver();
+			break;
+		case "edge":
+			System.out.println("Edge is selected");
+			driver = initMSEdgeDriver();
+			break;
+		default:
+			System.out.println("Chrome is selected");
+			driver = initChromeDriver();
+		}
+
+		return driver;
+	}
+
+	public void closeDriver() {
+		try {
+			if (driver != null) {
+				driver.quit();
+			}
+		} catch (Exception e) {
+			System.out.println("Exception: " + e);
 		}
 	}
 }

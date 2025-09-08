@@ -3,7 +3,9 @@ package automation.pageLocator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 
-public class ALADA_HomePageFactory {
+import automation.common.CommonBase;
+
+public class ALADA_HomePageFactory extends CommonBase {
 	private WebDriver driver;
 
 	@FindBy(xpath = "//div[@class='avatar2']")
@@ -27,9 +29,10 @@ public class ALADA_HomePageFactory {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void logoutFunction() {
-		accountImg.click();
-		exitButton.click();
+	public void logoutFunction() throws InterruptedException {
+		Thread.sleep(2000);
+		clickByJS(By.xpath("//div[@class='avatar2']"));
+		clickByJS(By.xpath("//a[text()='Thoát']"));
 	}
 
 	public boolean checkHomePage_Register(String email) {

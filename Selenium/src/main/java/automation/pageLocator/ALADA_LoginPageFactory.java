@@ -3,7 +3,9 @@ package automation.pageLocator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.*;
 
-public class ALADA_LoginPageFactory {
+import automation.common.CommonBase;
+
+public class ALADA_LoginPageFactory extends CommonBase {
 	private WebDriver driver;
 	@FindBy(xpath = "//a[text()='Đăng Nhập']")
 	@CacheLookup
@@ -30,21 +32,21 @@ public class ALADA_LoginPageFactory {
 	}
 
 	public void loginFunction(String email, String pass) {
-		if (loginNavigate.isEnabled())
-			loginNavigate.click();
+		if (isElementDisplayed(By.xpath("//a[text()='Đăng Nhập']")))
+			clickByJS(By.xpath("//a[text()='Đăng Nhập']"));
 		else
 			return;
 
-		emailInput.clear();
-		emailInput.sendKeys(email);
-		passInput.clear();
-		passInput.sendKeys(pass);
+		//emailInput.clear();
+		type(By.id("txtLoginUsername"), email);
+		//passInput.clear();
+		type(By.id("txtLoginPassword"), pass);
 
-		if (loginButton.isEnabled())
-			loginButton.click();
+		if (isElementDisplayed(By.xpath("(//button[text()='ĐĂNG NHẬP'])[3]")))
+			clickByJS(By.xpath("(//button[text()='ĐĂNG NHẬP'])[3]"));
 	}
 
 	public boolean isDisplayLogin() {
-		return menu_LoginButton.isDisplayed();
+		return isElementDisplayed(By.xpath("//a[text()='Đăng Nhập']"));
 	}
 }

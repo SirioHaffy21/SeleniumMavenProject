@@ -12,8 +12,10 @@ import automation.pageLocator.*;
 
 public class Alada_LoginTest extends CommonBase {
 	@BeforeMethod
-	public void openBrowser() {
-		driver = initChromeDriver(CT_PageURL.ALADA_URL);
+	@Parameters({ "browser" })
+	public void initProcess(@Optional("edge") String browser) {
+		setupDriver(browser);
+		driver.get(CT_PageURL.ALADA_URL);
 	}
 
 	@Test
@@ -25,14 +27,20 @@ public class Alada_LoginTest extends CommonBase {
 	}
 
 	@Test
-	public void logoutSuccessfully() {
+	public void logoutSuccessfully() throws InterruptedException {
 
 		ALADA_LoginPageFactory factory = new ALADA_LoginPageFactory(driver);
 		factory.loginFunction("nva@gmail.com", "123456");
+		Thread.sleep(2000);
 		ALADA_HomePageFactory factoryHome = new ALADA_HomePageFactory(driver);
 		factoryHome.logoutFunction();
 
 		assertTrue(factory.isDisplayLogin());
+	}
+
+	@AfterMethod
+	public void endProcess() {
+		closeDriver();
 	}
 
 }

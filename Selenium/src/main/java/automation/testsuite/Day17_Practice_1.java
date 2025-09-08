@@ -10,9 +10,11 @@ import automation.constant.CT_PageURL;
 
 public class Day17_Practice_1 extends CommonBase{
 	@BeforeMethod
-	public void initProcess() 
+	@Parameters({"browser"})
+	public void initProcess(String browser) 
 	{
-		driver = initChromeDriver(CT_PageURL.MEDIAMART_URL);
+		setupDriver(browser);
+		driver.get(CT_PageURL.MEDIAMART_URL);
 	}
 	
 	@Test

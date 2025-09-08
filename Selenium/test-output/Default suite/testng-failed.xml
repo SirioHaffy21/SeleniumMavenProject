@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.testsuite.Day17_Practice_1">
+      <class name="automation.testsuite.Alada_LoginTest">
         <methods>
-          <include name="initProcess"/>
-          <include name="testZaloIframe"/>
           <include name="endProcess"/>
+          <include name="initProcess"/>
+          <include name="logoutSuccessfully"/>
         </methods>
-      </class> <!-- automation.testsuite.Day17_Practice_1 -->
+      </class> <!-- automation.testsuite.Alada_LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

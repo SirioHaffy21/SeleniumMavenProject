@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite">
+
+	<test name="Regression Test on Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="automation.testsuite.Day17_iFrame" /> 
+			<class name="automation.testsuite.Alada_LoginTest" /> 
+		</classes>	
+	</test> 
+	<test name="Regression Test on Egde">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+			<class name="automation.testsuite.Day17_iFrame" /> 
+			<class name="automation.testsuite.Alada_LoginTest" /> 
+		</classes>	
+	</test> 
+	<test name="Regression Test on Firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="automation.testsuite.Day17_iFrame" /> 
+			<class name="automation.testsuite.Alada_LoginTest" /> 
+		</classes>	
+	</test> 
+	
+</suite> <!-- Suite -->
